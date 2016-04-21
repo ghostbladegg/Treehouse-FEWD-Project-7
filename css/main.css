@@ -1,0 +1,180 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* General */
+#wrapper {
+  margin: 0 auto;
+}
+
+video {
+  width: 100%;
+}
+
+
+#video-controls {
+  width: 100%;
+  bottom: 4px;
+  height: 25px;
+}
+
+#play,
+#timer,
+#mute,
+#volumeslider,
+#fullscreen {
+  display: none;
+}
+
+#video-wrapper:hover #video-controls {
+  width: 100%;
+  bottom: 4px;
+  height: 50px;
+}
+
+#video-wrapper:hover #play,
+#video-wrapper:hover #timer,
+#video-wrapper:hover #mute,
+#video-wrapper:hover #volumeslider,
+#video-wrapper:hover #fullscreen {
+  display: inline-block;
+}
+
+#play {
+  left: 5px;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+#fullscreen {
+  right: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+#transcript p {
+  padding: 0 15px;
+  text-align: justify;
+  line-height: 1.2em;
+}
+
+#seekbar[type=range] {
+  -webkit-appearance: none;
+  height: 5px;
+}
+
+#seekbar[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 5px;
+}
+
+#volumeslider[type=range] {
+  -webkit-appearance: none;
+  height: 10px;
+}
+
+#volumeslider[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+}
+
+#fillbar {
+  bottom: 11px;
+  height: 5px;
+}
+
+#video-wrapper:hover #fillbar {
+  bottom: 35.6px;
+  height: 2px;
+}
+
+#seekbar {
+  width: 100%;
+}
+
+#seekbar,
+#volumeslider {
+  cursor: pointer;
+}
+
+#timer {
+  bottom: 5px;
+  left: 40px;
+}
+
+#volumeslider {
+  bottom: 10px;
+  right: 50px;
+}
+
+#mute {
+  bottom: 0;
+  right: 185px;
+  width: 30px;
+  height: 30px;
+  background-size: 26px;
+  background-repeat: no-repeat;
+}
+
+/* Position */
+#video-wrapper {
+  position: relative;
+}
+
+#mute,
+#volumeslider,
+#timer,
+#fillbar,
+#fullscreen,
+#play,
+#video-controls {
+  position: absolute;
+}
+
+/* Color */
+.highlight {
+  color: orange;
+}
+
+#timer {
+  color: #eee;
+}
+
+#video-controls {
+  background-color: rgba(0,0,0, .5);
+}
+
+#seekbar[type=range],
+#volumeslider[type=range] {
+  background-color: rgba(255,255,255,.2);
+}
+
+#fillbar,
+#seekbar[type="range"]::-webkit-slider-thumb,
+#volumeslider[type="range"]::-webkit-slider-thumb {
+  background-color: orange;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  #wrapper {
+    width: 768px;
+  }
+  #transcript p {
+    line-height: 1.3em;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #transcript p {
+    padding: 0;
+  }
+}
